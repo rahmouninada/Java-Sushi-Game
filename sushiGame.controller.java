@@ -8,7 +8,7 @@ package src.sushiGame.controller;
 
 /*  CHEF CONTROLLER INTERFACE */
 import sushiGame.model.BeltObserver;
-public interface ChefController extends BeltObserver {
+public interface ChefController_Interface extends BeltObserver {
 }
 
 /*  NIGIRI CHEF CONTROLLER CLASS */
