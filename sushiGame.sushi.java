@@ -9,7 +9,7 @@
 package src.sushiGame.sushi;
 
 /* INGREDIENT INTERFACE */
-public interface Ingredient {
+public interface Ingredient_Interface {
 	String getName();
 	double getCaloriesPerDollar();
 	int getCaloriesPerOunce();
@@ -21,7 +21,7 @@ public interface Ingredient {
 }
 
 /* INGREDIENT PORTION INTERFACE */
-public interface IngredientPortion {
+public interface IngredientPortion_Interface {
 	Ingredient getIngredient();
 	String getName();
 	double getAmount();
@@ -34,8 +34,8 @@ public interface IngredientPortion {
 }
 
 /* PLATE INTERFACE */
-import sushigame.model.Chef;
-public interface Plate {
+import sushiGame.model.Chef;
+public interface Plate_Interface {
 	 public enum Color {RED, GREEN, BLUE, GOLD}
 
      Sushi getContents();
@@ -46,7 +46,7 @@ public interface Plate {
 }
 
 /* SUSHI INTERFACE */
-public interface Sushi {
+public interface Sushi_Interface {
 
 	String getName();
 	IngredientPortion[] getIngredients();
@@ -86,7 +86,7 @@ public class AvocadoPortion extends IngredientPortionImpl {
 }
 
 /* BLUE PLATE CLASS */
-import sushigame.model.Chef;
+import sushiGame.model.Chef;
 
 public class BluePlate extends PlateImpl {
 
@@ -152,7 +152,7 @@ public class EelPortion extends IngredientPortionImpl {
 }
 
 /* GOLD PLATE CLASS */
-import sushigame.model.Chef;
+import sushiGame.model.Chef;
 public class GoldPlate extends PlateImpl {
 
 	public GoldPlate(Chef chef, Sushi s, double price) throws PlatePriceException {
@@ -168,7 +168,7 @@ public class GoldPlate extends PlateImpl {
 }
 
 /* GREEN PLATE CLASS */
-import sushigame.model.Chef;
+import sushiGame.model.Chef;
 public class GreenPlate extends PlateImpl {
 
 	public GreenPlate(Chef chef, Sushi s) throws PlatePriceException {
@@ -376,7 +376,7 @@ public class Nigiri implements Sushi {
 }
 
 /* PLATE IMPLEMENTATION CLASS */
-import sushigame.model.Chef;
+import sushiGame.model.Chef;
 
 abstract public class PlateImpl implements Plate {
 
@@ -444,7 +444,7 @@ public class PlatePriceException extends Exception {
 }
 
 /* RED PLATE CLASS */
-import sushigame.model.Chef;
+import sushiGame.model.Chef;
 public class RedPlate extends PlateImpl {
 	public RedPlate(Chef chef, Sushi s) throws PlatePriceException {
 		super(chef, s, 1.0, Plate.Color.RED);
